@@ -10,7 +10,6 @@ function App() {
       .then(datas => {
         setData(datas.recipes);
         console.log(datas.recipes[0].image);
-
       })
       .catch(error => {
         console.error('Error fetching data:', error);
@@ -20,9 +19,7 @@ function App() {
       });
   }, []);
 
-  <Suspense fallback={<div><h1>Loading recipes...</h1></div>}>
-   
-  </Suspense>
+  <Suspense fallback={<div><h1>Loading recipes...</h1></div>}></Suspense>
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
